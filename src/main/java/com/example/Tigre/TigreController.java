@@ -8,22 +8,26 @@ import org.springframework.web.bind.annotation.*;
 public class TigreController {
 
     @Autowired
-    TigreService tigreService;
+    TigreService tigreServiceSQL;
+    //TigreService tigreService;
 
     @GetMapping("check")
     public List<Tigre> voirTigre() {
-        return tigreService.getTigre();
+        return tigreServiceSQL.getTigre();
+        //return tigreService.getTigre();
     }
 
     @PostMapping("add")
     public void createTigre(@RequestBody Tigre newTigre) {
         System.out.println("\n-Nouveau tigre receptionné-\n" + newTigre);
-        tigreService.addTigre(newTigre);
+        tigreServiceSQL.addTigre(newTigre);
+        //tigreService.addTigre(newTigre);
     }
 
-    @DeleteMapping("/del/{nom}")
+/*    @DeleteMapping("/del/{nom}")
     public void enleveTigre(@PathVariable("nom") String nomTigre) {
         System.out.println("\n-Suppression du tigre " + nomTigre + "-");
-        tigreService.deleteTigre(nomTigre);
-    }
+        tigreServiceSQL.deleteTigre(nomTigre);
+        //tigreService.deleteTigre(nomTigre);
+    }*/
 }

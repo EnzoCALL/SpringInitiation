@@ -1,35 +1,49 @@
 package com.example.Tigre;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="tigre")
 public class Tigre {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+
     //ATTRIBUTS DU TIGRE
+    @Column(name="nom")
     private String nom;
+    @Column(name="age")
     private int age;
+    @Column(name="caractere")
     private String caractere;
+    @Column(name="aggressif")
     private boolean aggressif;
+
+    @Column(name="couleur_de_pelage")
     private String couleurDePelage;
+
+    @Column(name="enfants")
     private int enfants;
-    private boolean vaccine;
 
 
     //CONSTRUCTEUR PAR DEFAUT VIDE
     public Tigre() {}
 
     //CONSTRUCTEUR COMPLET
-    public Tigre(String nom, int age, String caractere, boolean aggressif, String couleurDePelage, int enfants, boolean vaccine) {
+    public Tigre(String nom, int age, String caractere, boolean aggressif, String couleurDePelage, int enfants) {
         this.nom = nom;
         this.age = age;
         this.caractere = caractere;
         this.aggressif = aggressif;
         this.couleurDePelage = couleurDePelage;
         this.enfants = enfants;
-        this.vaccine = vaccine;
     }
 
     @Override
     public String toString() {
-        return "Nom: " + nom + " | Age: " + age + " | Caractere: " + caractere + " | Aggressif: " + aggressif
-                + " | Couleur du pelage: " + couleurDePelage + " | Enfants: " + enfants + " | Vacciné: " + vaccine;
+        return "Nom: " + nom + " | Age: " + age + " | Caractere: " + caractere + " | Aggressif: " + aggressif + " | Couleur du pelage: " + couleurDePelage
+                +  " | Enfants: " + enfants;
     }
 
     //GETTER - SETTER
@@ -57,13 +71,6 @@ public class Tigre {
     }
     public void setEnfants(int enfants) {
         this.enfants = enfants;
-    }
-
-    public boolean isVaccine() {
-        return vaccine;
-    }
-    public void setVaccine(boolean vaccine) {
-        this.vaccine = vaccine;
     }
 
     public int getAge() {
