@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TigreApplication {
+public class TigreExecutable {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TigreApplication.class, args);
+		SpringApplication.run(TigreExecutable.class, args);
 	}
 
 }

@@ -2,6 +2,7 @@ package com.example.Tigre;
 
 public class Tigre {
 
+    //ATTRIBUTS DU TIGRE
     private String nom;
     private int age;
     private String caractere;
@@ -10,6 +11,11 @@ public class Tigre {
     private int enfants;
     private boolean vaccine;
 
+
+    //CONSTRUCTEUR PAR DEFAUT VIDE
+    public Tigre() {}
+
+    //CONSTRUCTEUR COMPLET
     public Tigre(String nom, int age, String caractere, boolean aggressif, String couleurDePelage, int enfants, boolean vaccine) {
         this.nom = nom;
         this.age = age;
@@ -20,28 +26,21 @@ public class Tigre {
         this.vaccine = vaccine;
     }
 
-    public Tigre() {
-
-    }
-
     @Override
     public String toString() {
         return "Nom: " + nom + " | Age: " + age + " | Caractere: " + caractere + " | Aggressif: " + aggressif
                 + " | Couleur du pelage: " + couleurDePelage + " | Enfants: " + enfants + " | Vacciné: " + vaccine;
     }
 
+    //GETTER - SETTER
     public String getCaractere() {
         return caractere;
     }
-
     public void setCaractere(String caractere) {
         this.caractere = caractere;
     }
 
-    public boolean isAggressif() {
-        return aggressif;
-    }
-
+    public boolean isAggressif() {return aggressif;}
     public void setAggressif(boolean aggressif) {
         this.aggressif = aggressif;
     }
@@ -49,7 +48,6 @@ public class Tigre {
     public String getCouleurDePelage() {
         return couleurDePelage;
     }
-
     public void setCouleurDePelage(String couleurDePelage) {
         this.couleurDePelage = couleurDePelage;
     }
@@ -57,7 +55,6 @@ public class Tigre {
     public int getEnfants() {
         return enfants;
     }
-
     public void setEnfants(int enfants) {
         this.enfants = enfants;
     }
@@ -65,7 +62,6 @@ public class Tigre {
     public boolean isVaccine() {
         return vaccine;
     }
-
     public void setVaccine(boolean vaccine) {
         this.vaccine = vaccine;
     }
@@ -73,7 +69,6 @@ public class Tigre {
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
@@ -81,10 +76,8 @@ public class Tigre {
     public String getNom() {
         return nom;
     }
-
     public void setNom(String nom) {
         this.nom = nom;
     }
-
 
 }
